@@ -1,4 +1,4 @@
-name: Deploy to simply.com
+name: Deploy to simply.com - nice
 
 on:
   push:
