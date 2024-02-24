@@ -3,7 +3,7 @@ name: Generate article
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   generate-image:
