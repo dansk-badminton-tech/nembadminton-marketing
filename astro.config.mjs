@@ -70,15 +70,5 @@ export default defineConfig({
 	},
 	experimental: {
 		contentCollectionCache: true,
-	},
-	redirects: {
-		'/login': {
-			status: 301,
-			destination: '/app/login'
-		},
-		'/sign-up': {
-			status: 301,
-			destination: '/app/sign-up'
-		}
 	}
 });
