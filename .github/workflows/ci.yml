@@ -43,4 +43,4 @@ jobs:
             key: ${{ secrets.SIMPLY_SSH_KEY }}
             port: 22
             script: |
-              ln -sfn /var/www/badminton.social/projects/marketing-deploy/${{ github.sha }} /var/www/badminton.social/marketing
+              ln -sfn /var/www/badminton.social/projects/marketing-deploy/${{ github.sha }} /var/www/badminton.social/nembadminton.dk/marketing
