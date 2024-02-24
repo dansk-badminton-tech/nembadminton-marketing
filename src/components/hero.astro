@@ -5,10 +5,9 @@ import abstractDottedGlobeIllustration from "assets/abstract-dotted-globe-illust
 import { Image } from "astro:assets";
 import { t } from "i18next";
 
-const { dynamic = false } = Astro.props;
 ---
 
-<div class="relative isolate pt-14 dark:bg-stone-950">
+<div class="relative isolate pt-14 dark:bg-stone-950 mb-10">
 	<div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80">
 		<svg
 			class="relative left-[calc(50%-11rem)] -z-10 h-[21.1875rem] max-w-none -translate-x-1/2 rotate-[30deg] sm:left-[calc(50%-30rem)] sm:h-[42.375rem] animate-slide"
@@ -40,49 +39,34 @@ const { dynamic = false } = Astro.props;
 					{t("hero.subtitle")}
 				</p>
 				<div class="mt-10 flex items-center justify-center gap-x-2 md:gap-x-6">
-					<Link href="https://github.com/zankhq/astros">{t("hero.main_button_text")}</Link>
+					<Link href="/app/sign-up">{t("hero.main_button_text")}</Link>
 					{
-						dynamic ? (
-							<Link href="/" style="muted">
-								{t("hero_animated.secondary_button_text")}
-								<span aria-hidden="true" class="pl-1 text-black dark:text-white">
-									→
-								</span>
-							</Link>
-						) : (
-							<Link href="/animated" style="muted">
-								{t("hero.secondary_button_text")}
-								<span aria-hidden="true" class="pl-1 text-black dark:text-white">
-									→
-								</span>
-							</Link>
-						)
+						<Link href="/app/login" style="muted">
+							{t("hero_animated.secondary_button_text")}
+							<span aria-hidden="true" class="pl-1 text-black dark:text-white">
+								→
+							</span>
+						</Link>
 					}
 				</div>
 			</div>
-			<div class="flex justify-center items-center mt-4 md:mt-8">
+			<div class="mt-16 flow-root sm:mt-24">
+				<div class="-m-2 rounded-xl bg-gray-900/5 p-2 ring-1 ring-inset ring-gray-900/10 lg:-m-4 lg:rounded-2xl lg:p-4">
+				  <img src="https://nembadminton.dk/images/teamfight-planning-landing-2.png?ea215390767f4394b8b7c839c93ceaf0" alt="App screenshot" width="2432" height="1442" class="rounded-md shadow-2xl ring-1 ring-gray-900/10">
+				</div>
+			  </div>
+			<!-- <div class="flex justify-center items-center mt-4 md:mt-8">
 				{
-					dynamic ? (
-						<>
-							<h2
-								class="text-2xl md:text-4xl max-w-2xl text-center font-bold tracking-tight text-black dark:text-white absolute"
-								style="line-height: 1.5">
-								{t("hero.globe_title")}
-							</h2>
-							<Cobe />
-						</>
-					) : (
-						<Image
-							class="inline-block mt-12 md:mt-20"
-							src={abstractDottedGlobeIllustration}
-							alt="Astros"
-							width={600}
-							height={600}
-							loading="eager"
-						/>
-					)
+					<>
+						<h2
+							class="text-2xl md:text-4xl max-w-2xl text-center font-bold tracking-tight text-black dark:text-white absolute"
+							style="line-height: 1.5">
+							{t("hero.globe_title")}
+						</h2>
+						<Cobe />
+					</>
 				}
-			</div>
+			</div> -->
 		</div>
 	</div>
 	<div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]">

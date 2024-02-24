@@ -22,7 +22,7 @@ const buildDate = __DATE__;
 
 const { title, lang = null } = Astro.props;
 
-const makeTitle = title ? title + " | " + "Astros" : "Astros - Starter Template for Astro with Tailwind CSS";
+const makeTitle = title ? title + " | " + "Nembadminton" : "Nembadminton - Planlæg, sammensæt, spil!";
 ---
 
 <!doctype html>
@@ -42,17 +42,17 @@ const makeTitle = title ? title + " | " + "Astros" : "Astros - Starter Template 
 
 		<SEO
 			title={makeTitle}
-			description="Astros is a starter website template for Astro built with TailwindCSS and alpine js."
+			description="Optimer jeres holdturneringer med vores digitale løsninger. Gør planlægning, koordinering og gennemførelse til en leg, og lad teknologien løfte jeres klub til nye højder."
 			canonical={canonicalURL}
 			openGraph={{
 				basic: {
 					url: canonicalURL,
 					type: "website",
-					title: `Astros - Starter Template for Astro`,
+					title: `Nembadminton - Planlæg, sammensæt, spil!`,
 					image: resolvedImageWithDomain,
 				},
 				image: {
-					alt: "Astros Homepage Screenshot",
+					alt: "Nembadminton",
 				},
 			}}
 		/>
@@ -70,8 +70,8 @@ const makeTitle = title ? title + " | " + "Astros" : "Astros - Starter Template 
 			document.addEventListener("astro:after-swap", handleThemeChange);
 		</script>
 
-		{pwaInfo && <Fragment set:html={pwaInfo.webManifest.linkTag} />}
-		<script src="/src/pwa.ts"></script>
+		<!--{pwaInfo && <Fragment set:html={pwaInfo.webManifest.linkTag} />}-->
+		<!--<script src="/src/pwa.ts"></script>-->
 	</head>
 	<body class="dark:bg-stone-950">
 		<Navbar />

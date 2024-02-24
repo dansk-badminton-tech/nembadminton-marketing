@@ -10,7 +10,7 @@ import AstroPWA from "@vite-pwa/astro";
 
 // https://astro.build/config
 export default defineConfig({
-	site: "https://astros.zank.studio",
+	site: "https://nembadminton.dk",
 	vite: {
 		define: {
 			__DATE__: `'${new Date().toISOString()}'`,
@@ -21,45 +21,45 @@ export default defineConfig({
 		sitemap(),
 		astroI18next(),
 		alpinejs(),
-		AstroPWA({
-			mode: "production",
-			base: "/",
-			scope: "/",
-			includeAssets: ["favicon.svg"],
-			registerType: "autoUpdate",
-			manifest: {
-				name: "Astros - Starter Template for Astro with Tailwind CSS",
-				short_name: "Astros",
-				theme_color: "#ffffff",
-				icons: [
-					{
-						src: "pwa-192x192.png",
-						sizes: "192x192",
-						type: "image/png",
-					},
-					{
-						src: "pwa-512x512.png",
-						sizes: "512x512",
-						type: "image/png",
-					},
-					{
-						src: "pwa-512x512.png",
-						sizes: "512x512",
-						type: "image/png",
-						purpose: "any maskable",
-					},
-				],
-			},
-			workbox: {
-				navigateFallback: "/404",
-				globPatterns: ["*.js"],
-			},
-			devOptions: {
-				enabled: false,
-				navigateFallbackAllowlist: [/^\/404$/],
-				suppressWarnings: true,
-			},
-		}),
+//		AstroPWA({
+//			mode: "production",
+//			base: "/",
+//			scope: "/",
+//			includeAssets: ["favicon.svg"],
+//			registerType: "autoUpdate",
+//			manifest: {
+//				name: "Nembadminton - Alt til holdturnering",
+//				short_name: "Nembadminton",
+//				theme_color: "#ffffff",
+//				icons: [
+//					{
+//						src: "pwa-192x192.png",
+//						sizes: "192x192",
+//						type: "image/png",
+//					},
+//					{
+//						src: "pwa-512x512.png",
+//						sizes: "512x512",
+//						type: "image/png",
+//					},
+//					{
+//						src: "pwa-512x512.png",
+//						sizes: "512x512",
+//						type: "image/png",
+//						purpose: "any maskable",
+//					},
+//				],
+//			},
+//			workbox: {
+//				navigateFallback: "/404",
+//				globPatterns: ["*.js"],
+//			},
+//			devOptions: {
+//				enabled: false,
+//				navigateFallbackAllowlist: [/^\/404$/],
+//				suppressWarnings: true,
+//			},
+//		}),
 	],
 	markdown: {
 		rehypePlugins: [
@@ -70,5 +70,15 @@ export default defineConfig({
 	},
 	experimental: {
 		contentCollectionCache: true,
+	},
+	redirects: {
+		'/login': {
+			status: 301,
+			destination: '/app/login'
+		},
+		'/sign-up': {
+			status: 301,
+			destination: '/app/sign-up'
+		}
 	}
 });
