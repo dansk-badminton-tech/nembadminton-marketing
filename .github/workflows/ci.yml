@@ -1,0 +1,35 @@
+name: Generate article
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  generate-image:
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      -   name: Checkout repository
+          uses: actions/checkout@v4
+
+      -   name: Setup NodeJS
+          uses: actions/setup-node@v4
+          with:
+            node-version: '20.x'
+            cache: 'yarn'
+
+      -   name: Frontend build
+          run: |
+            yarn install --frozen-lockfile
+            yarn run build
+
+      - name: Upload new frontend
+        uses: appleboy/scp-action@v0.1.4
+        with:
+          host: ${{ secrets.SIMPLY_SSH_HOST }}
+          username: ${{ vars.SIMPLY_SSH_USERNAME }}
+          key: ${{ vars.SIMPLY_SSH_KEY }}
+          port: 22
+          source: "dist"
+          target: /var/www/badminton.social/projects/marketing-deploy/${{ github.sha }}
