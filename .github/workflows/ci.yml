@@ -1,4 +1,4 @@
-name: Generate article
+name: Deploy to simply.com
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  generate-image:
+  deploy-to-simply:
     runs-on: ubuntu-latest
     environment: production
     steps:
@@ -27,9 +27,9 @@ jobs:
       - name: Upload new frontend
         uses: appleboy/scp-action@v0.1.4
         with:
-          host: ${{ secrets.SIMPLY_SSH_HOST }}
+          host: ${{ vars.SIMPLY_SSH_HOST }}
           username: ${{ vars.SIMPLY_SSH_USERNAME }}
-          key: ${{ vars.SIMPLY_SSH_KEY }}
+          key: ${{ secrets.SIMPLY_SSH_KEY }}
           port: 22
           source: "dist"
           target: /var/www/badminton.social/projects/marketing-deploy/${{ github.sha }}
