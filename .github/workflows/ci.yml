@@ -43,4 +43,4 @@ jobs:
             key: ${{ secrets.SIMPLY_SSH_KEY }}
             port: 22
             script: |
-              echo ln -sfn /var/www/nembadminton.dk/projects/marketing-deploy/${{ github.sha }} /var/www/nembadminton.dk/nembadminton.dk
+              ln -sfn /var/www/nembadminton.dk/projects/marketing-deploy/${{ github.sha }} /var/www/nembadminton.dk/public_html
