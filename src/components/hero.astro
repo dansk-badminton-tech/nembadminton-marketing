@@ -1,9 +1,9 @@
 ---
 import Cobe from "@components/cobe.astro";
 import Link from "@components/ui/link.astro";
-import abstractDottedGlobeIllustration from "assets/abstract-dotted-globe-illustration.png";
 import { Image } from "astro:assets";
 import { t } from "i18next";
+import heroDashboard from "assets/teamfight.png"
 
 ---
 
@@ -52,7 +52,7 @@ import { t } from "i18next";
 			</div>
 			<div class="mt-16 flow-root sm:mt-24">
 				<div class="-m-2 rounded-xl bg-gray-900/5 p-2 ring-1 ring-inset ring-gray-900/10 lg:-m-4 lg:rounded-2xl lg:p-4">
-				  <img src="https://nembadminton.dk/images/teamfight-planning-landing-2.png?ea215390767f4394b8b7c839c93ceaf0" alt="App screenshot" width="2432" height="1442" class="rounded-md shadow-2xl ring-1 ring-gray-900/10">
+				  <Image src={heroDashboard} alt="App screenshot" width="2432" height="1442" class="rounded-md shadow-2xl ring-1 ring-gray-900/10">
 				</div>
 			  </div>
 			<!-- <div class="flex justify-center items-center mt-4 md:mt-8">

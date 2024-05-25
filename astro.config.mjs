@@ -1,4 +1,4 @@
-import { defineConfig } from "astro/config";
+import { defineConfig, passthroughImageService } from "astro/config";
 import tailwind from "@astrojs/tailwind";
 import sitemap from "@astrojs/sitemap";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
@@ -16,6 +16,9 @@ export default defineConfig({
 			__DATE__: `'${new Date().toISOString()}'`,
 		},
 	},
+	image: {
+		service: passthroughImageService(),
+	  },
 	integrations: [
 		tailwind(),
 		sitemap(),
