@@ -32,7 +32,7 @@ jobs:
           key: ${{ secrets.SIMPLY_SSH_KEY }}
           port: 22
           source: "dist"
-          target: /var/www/badminton.social/projects/marketing-deploy/${{ github.sha }}
+          target: /var/www/nembadminton.dk/projects/marketing-deploy/${{ github.sha }}
           strip_components: 1
 
       -   name: Switch to new version of marketing
@@ -43,4 +43,4 @@ jobs:
             key: ${{ secrets.SIMPLY_SSH_KEY }}
             port: 22
             script: |
-              cp -a /var/www/badminton.social/projects/marketing-deploy/${{ github.sha }}/. /var/www/badminton.social/nembadminton.dk
+              echo ln -sfn /var/www/nembadminton.dk/projects/marketing-deploy/${{ github.sha }} /var/www/nembadminton.dk/nembadminton.dk
