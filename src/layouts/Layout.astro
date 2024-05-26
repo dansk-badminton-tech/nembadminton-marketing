@@ -57,15 +57,6 @@ const makeTitle = title ? title + " | " + "Nembadminton" : "Nembadminton - Planl
 			}}
 		/>
 
-		<script is:inline>
-			function handleThemeChange() {
-				document.documentElement.classList.remove("dark");
-			}
-			handleThemeChange();
-			document.removeEventListener("astro:after-swap", handleThemeChange);
-			document.addEventListener("astro:after-swap", handleThemeChange);
-		</script>
-
 		<!--{pwaInfo && <Fragment set:html={pwaInfo.webManifest.linkTag} />}-->
 		<!--<script src="/src/pwa.ts"></script>-->
 	</head>

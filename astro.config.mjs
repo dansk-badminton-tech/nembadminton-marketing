@@ -23,46 +23,7 @@ export default defineConfig({
 		tailwind(),
 		sitemap(),
 		astroI18next(),
-		alpinejs(),
-//		AstroPWA({
-//			mode: "production",
-//			base: "/",
-//			scope: "/",
-//			includeAssets: ["favicon.svg"],
-//			registerType: "autoUpdate",
-//			manifest: {
-//				name: "Nembadminton - Alt til holdturnering",
-//				short_name: "Nembadminton",
-//				theme_color: "#ffffff",
-//				icons: [
-//					{
-//						src: "pwa-192x192.png",
-//						sizes: "192x192",
-//						type: "image/png",
-//					},
-//					{
-//						src: "pwa-512x512.png",
-//						sizes: "512x512",
-//						type: "image/png",
-//					},
-//					{
-//						src: "pwa-512x512.png",
-//						sizes: "512x512",
-//						type: "image/png",
-//						purpose: "any maskable",
-//					},
-//				],
-//			},
-//			workbox: {
-//				navigateFallback: "/404",
-//				globPatterns: ["*.js"],
-//			},
-//			devOptions: {
-//				enabled: false,
-//				navigateFallbackAllowlist: [/^\/404$/],
-//				suppressWarnings: true,
-//			},
-//		}),
+		alpinejs()
 	],
 	markdown: {
 		rehypePlugins: [

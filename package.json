@@ -5,7 +5,7 @@
 	"private": true,
 	"scripts": {
 		"dev": "astro dev --host",
-		"start": "astro dev",
+		"start": "astro dev --host",
 		"build": "astro build",
 		"build:localized": "pnpm run i18n:generate && pnpm run build",
 		"preview": "astro preview",
