@@ -59,11 +59,7 @@ const makeTitle = title ? title + " | " + "Nembadminton" : "Nembadminton - Planl
 
 		<script is:inline>
 			function handleThemeChange() {
-				if (localStorage.theme === "dark" || (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
-					document.documentElement.classList.add("dark");
-				} else {
-					document.documentElement.classList.remove("dark");
-				}
+				document.documentElement.classList.remove("dark");
 			}
 			handleThemeChange();
 			document.removeEventListener("astro:after-swap", handleThemeChange);
