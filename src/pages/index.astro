@@ -5,9 +5,8 @@ import Features from "@components/features.astro";
 import Faq from "@components/faq.astro";
 import Hero from "@components/hero.astro";
 import Layout from "@layouts/Layout.astro";
-import Team from "@components/team.astro"
-import TheWhy from "@components/thewhy.astro"
-import Stats from "../components/stats.astro";
+import Team from "@components/team.astro";
+import TheWhy from "@components/thewhy.astro";
 
 changeLanguage("en");
 ---
@@ -15,7 +14,6 @@ changeLanguage("en");
 <Layout>
 	<Container>
 		<Hero dynamic={true}/>
-		<Stats />
 		<TheWhy />
 		<Features />
 		<Team />
