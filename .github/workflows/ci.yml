@@ -7,6 +7,9 @@ on:
 
 jobs:
   deploy-to-simply:
+    env:
+      PUBLIC_DOMAIN: ${{ vars.PUBLIC_TEST }}
+      PUBLIC_API_DOMAIN: ${{ vars.SECRET_TEST }}
     runs-on: ubuntu-latest
     environment: production
     steps:
