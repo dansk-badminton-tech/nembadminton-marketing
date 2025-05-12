@@ -8,8 +8,8 @@ on:
 jobs:
   deploy-to-simply:
     env:
-      PUBLIC_DOMAIN: ${{ vars.PUBLIC_TEST }}
-      PUBLIC_API_DOMAIN: ${{ vars.SECRET_TEST }}
+      PUBLIC_DOMAIN: ${{ vars.PUBLIC_DOMAIN }}
+      PUBLIC_API_DOMAIN: ${{ vars.PUBLIC_API_DOMAIN }}
     runs-on: ubuntu-latest
     environment: production
     steps:
