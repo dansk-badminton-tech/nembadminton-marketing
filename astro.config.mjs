@@ -6,11 +6,12 @@ import { autolinkConfig } from "./plugins/rehype-autolink-config";
 import rehypeSlug from "rehype-slug";
 import astroI18next from "astro-i18next";
 import alpinejs from "@astrojs/alpinejs";
-import AstroPWA from "@vite-pwa/astro";
+import { loadEnv } from "vite";
+const { PUBLIC_DOMAIN } = loadEnv(process.env.NODE_ENV, process.cwd(), "");
 
 // https://astro.build/config
 export default defineConfig({
-	site: "https://nembadminton.dk",
+	site: PUBLIC_DOMAIN,
 	vite: {
 		define: {
 			__DATE__: `'${new Date().toISOString()}'`,
